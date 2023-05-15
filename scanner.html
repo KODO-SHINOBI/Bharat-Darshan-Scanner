@@ -40,7 +40,14 @@
             },  // Sets dimensions of scanning box (set relative to reader element width)
             fps: 20, // Frames per second to attempt a scan
         });
-        setTimeout(window.location.reload(),2000);
+        if(localStorage.getItem("refresh")){
+           console.log("Refreshed");
+           }
+           else{
+           localStorage.setItem("refresh",true);
+           setTimeout(window.location.reload(),2000);
+           }
+        
     
     
         scanner.render(success, error);
