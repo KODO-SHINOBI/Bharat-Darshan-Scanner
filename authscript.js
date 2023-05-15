@@ -53,7 +53,7 @@ solid_btn.addEventListener("click", () => {
     // console.log(email,pwd);
   if(email.value==="abc123@gmail.com" && pwd.value==="pixels1080"){
     alert("Signin Successful");
-    window.location.href="./scanner.html";
+    window.location.href="scanner.html";
   }
   else{
     location.reload();
