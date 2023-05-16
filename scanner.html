@@ -72,15 +72,16 @@
             }
         })
         .then(function(response){
-            if(response.status==200){
-                const z=response.json()
+            const z=response.json()
+            if(response.status===200){
+               
                 alert("Ticked Scanned",z.quantity)
             }
             else{
                 alert("Ticket is invalid")
             }
             
-            return response.json()
+            return z
             
         })
         .then(function(data){
